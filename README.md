@@ -1,17 +1,17 @@
 # Free Flight Lab Weather-Related Departure Delay Predictor
-## Project and Content Description
+## 1. Project and Content Description
 The goal of this project is to generate departure delay probability predictions given the weather at the scheduled time of departure for a given route in the context of regularly scheduled airline operations.
 
 The notebooks and scripts provided in this project are designed to compile flight and weather data, preprocess it for machine learning, define a machine learning pipeline, and train the selected machine learning algorithm for a binary classification of a given passenger flight departure as either "on-time" or "delayed". 
 
-## Dashboard
+## 2. Dashboard
 The project results were deployed on a streamlit app which can be accessed via: [ffl-delay-predictor.streamlit.app/](https://ffl-delay-predictor.streamlit.app/)
 ![Dashboard Screenshot](/images/dashboard_screenshot.png)
 
-## Project status
+## 3. Project status
 This project was completed as a Minimum Viable Product / Proof of Concept and is no longer actively maintained. It is therefore open to forking or further development per the corresponding [MIT License and associated conditions](#license). Please refer to the [Feasibility & Roadmap section](#feasibility--roadmap) for recommended next steps.
 
-## Data and Budget
+## 4. Data and Budget
 ### Sources
 The following APIs were chosen for this project due to their reliability and widespread industry usage. As such, they reflect state-of-the-art sources for flight information that is publically available and commercializable, albeit not free of cost:
 
@@ -30,17 +30,17 @@ The project was completed on-time and on-budget in the context of a Data Science
 - 5 support hours from our industry advisor
 - 40 support hours from our technical advisors
 
-## Prior Work
+## 5. Prior Work
 This project was inspired by a weather-delay analysis dashboard developed under the [Airbus MONARK](https://acubed.airbus.com/projects/monark/) program. The link to the dashboard is provided [here](https://datascribe.shinyapps.io/MonaRk/) for reference (please be advised that it requires some time to load, please be patient).
 
-## Installation and Requirements
+## 6. Installation and Requirements
 ### Prerequisites
 - Python 3.10.12 installed. You can download it from [python.org](https://www.python.org/downloads/release/python-31012/).
 - `pip` should be installed and up to date (`python -m pip install --upgrade pip`).
 
 ### Setup Instructions
 
-#### 1. Create a Virtual Environment
+#### A. Create a Virtual Environment
 It is recommended to create a virtual environment to manage dependencies.
 
 ##### Using `venv` (Standard)
@@ -55,7 +55,7 @@ conda create --name my_project_env python=3.10.12
 conda activate my_project_env
 ```
 
-#### 2. Install Dependencies
+#### B. Install Dependencies
 Ensure you have pip updated:
 
 ```bash
@@ -67,26 +67,26 @@ Then install the dependencies from requirements.txt:
 pip install -r env_requirements.txt
 ```
 
-#### 3. Verify Installation
+#### C. Verify Installation
 Run the following command to ensure all dependencies are installed correctly:
 
 ```bash
 python -c "import yaml, requests, numpy, pandas, sklearn, imblearn, shap, joblib, plotly, seaborn, matplotlib, folium, streamlit, avwx, IPython; print('All packages installed successfully!')"
 ```
 
-## Usage
+## 7. Usage
 This section outlines the methodology that you should follow to reproduce our results. Although we point to our notebooks and scripts specifically, this section was compiled with the aim that our results be reproducible if the general methodology is followed, rather than if our specific notebooks and scripts are deployed.
 
 **Note on ICAO vs. IATA codes:** where relevant and available, it is recommended that ICAO identifiers are used for aircraft types, operators, flight-identifiers etc. due to their property of being unique in each attribute context. 
 
-### 1. Compiling Flight Routes
+### 7.1. Compiling Flight Routes
 - a) Compile the ICAO codes for origin and destination airports of the target routes (*origin_ICAO-destination_ICAO*) in an iterable format for the target API request parameterization.
   - **NOTE:** It is at this step that you can inadvertently introduce bias e.g. by selecting routes that are chronically delayed or which have unusually high on-time performance relative to industry standards. A well diversified route-group is highly recommended if performing a general analysis vs. a route-specific analysis. 
 
 **Reference(s):**
 - Sample [dataset](example_data/routes_by_region_2024_v3.csv) and the [notebook](notebooks/FIN_1_routes_by_region.ipynb) used to compile route data from OAG sources
 
-### 2. Gathering Flightradar24 Data
+### 7.2. Gathering Flightradar24 Data
 - a) Define the date range for which you want to extract flight information
 - b) Define the parameters for the [Historic Flight Positions Full](https://fr24api.flightradar24.com/docs/endpoints/overview#historic-flight-positions-full) flightradar24 API endpoint:
   - i) *timestamp*: the endpoint requires a specific UNIX timestamp per query
@@ -100,7 +100,7 @@ This section outlines the methodology that you should follow to reproduce our re
 **Reference(s):**
 - [flightradar24 extraction notebook](notebooks/FIN_2_Gathering_Flightradar24_Data.ipynb)
 
-### 3. Gathering FlightAware Data 
+### 7.3. Gathering FlightAware Data 
 - a) Compile the unique flight identifiers collected in [step 2](#2-gathering-flightradar24-data) into an iterable format
   - **Recommendation**: use the *callsign* attribute returned for each flight in your flightradar24 query
 - b) Query the [get information for a historical flight](https://www.flightaware.com/aeroapi/portal/documentation#get-/history/flights/-ident-) FlightAware API endpoint using your unique flight identifiers
@@ -108,7 +108,7 @@ This section outlines the methodology that you should follow to reproduce our re
 **Reference(s):**
 - [FlightAware extraction notebook](notebooks/FIN_3_flightaware_data_extraction_by_FR24_callsign.ipynb)
 
-### 4. Gathering AVWX Data
+### 7.4. Gathering AVWX Data
 - a) Compile the ICAO codes and dates corresponding to the origin airports in the dataset you gathered in [step 3](#3-gathering-flightaware-data).
 - b) Define the querying logic for the [Station History: Get Reporty by Station](https://avwxhistory.docs.apiary.io/#introduction/flight-path-routing) AVWX API endpoint.
   - e.g. we first queried based on the date, followed by the airport. This way we were able to save partial .csv files that contained only the METAR data for a given time frame.
@@ -116,7 +116,7 @@ This section outlines the methodology that you should follow to reproduce our re
 **Reference(s):**
 - [METAR extraction notebook](notebooks/FIN_4_Gathering_METAR_Data.ipynb)
 
-### 5. Compiling the DataFrame
+### 7.5. Compiling the DataFrame
 **Instructions:**
 - a) Compile the METAR data collected in [step 4](#4-gathering-avwx-data).
 - b) Prepare METAR data for Machine Learning by following the Notebooks.
@@ -127,7 +127,7 @@ It is also The model we used was trained on the actual weather conditions as rep
 
 **NOTE if you intend to use aviation weather forecasts (TAF) rather than reports (METAR):** although aviation weather forecasts (TAF) share key attributes with the aviation weather reports (METAR) we used in our methodology, you will need to adapt the dataframe compilation logic and code as the TAF formats are more variable and may not include all the same attributes.
 
-### 6. Pre-Processing for Machine Learning
+### 7.6. Pre-Processing for Machine Learning
 **Instructions:**
 - a) Perform obvious cleaning such as dropping rows with missing values for attributes that are too risky to impute or which cannot otherwise be ignored.
 - b) Create new features which could have predictive (tbc)
@@ -139,29 +139,29 @@ It is also The model we used was trained on the actual weather conditions as rep
 **Reference(s):**
 - [Pre-Processing for Machine Learning Notebook](notebooks/FIN_6_Pre-Processing_for_ML.ipynb) 
 
-### 7. Machine Learning Training
+### 7.7. Machine Learning Training
 **Instructions:**
 - a) 
 
 **Reference(s):**
 - [Training for Machine Learning Notebook](notebooks/FIN_7_Machine_Learning_Training.ipynb) 
 
-### 8. Explainability
+### 7.8. Explainability
 **Instructions:**
 - a) 
 
 **Reference(s):**
 - [Explainability Notebook](notebooks/FIN_8_Explainability.ipynb)
 
-### 9. Dashboard
-**Instructions:**
-- a) 
+### 7.9. Dashboard
+Please see [section 2. Dashboard](#2-dashboard)
+
 
 **Reference(s):**
-- [Dashboard graphs notebook](notebooks/FIN_9_Dashboard_graphs.ipynb)
-- Dashboard [link]()
+- Dashboard graph example [notebook](notebooks/FIN_9_Dashboard_graphs.ipynb)
+- Dashboard app [link](https://ffl-delay-predictor.streamlit.app/)
 
-## Observations, Feasibility & Roadmap
+## 8. Observations, Feasibility & Roadmap
 ### Observations
 - **The dataset we compiled inadvertently biases the algorithm to favor operational factors**
   - Running SHAP explainability algorithms on our predictions showed that the algorithm favors the features that match the input to a specific airport/route etc, even when these are absent in the training feature-set (i.e. weather only). As such, it is likely that our dataset's predictive signal has more to do with operators and airports, rather than weather input at scheduled time of departure. 
@@ -181,18 +181,18 @@ Based on the [observations outlined above](#observations), the authors conclude 
 3. **Quantified Delay Predictions** would give a more actionable output in the context of an airline Network Operations Center (NOC). Our model predicts a binary "on-time" or "delayed" classification; where a delay is defined as an actual gate-off time later than 15 minutes after the scheduled gate-off time (the industry standard). In this context, the prediciton makes no distinction between a 20 minute delay (which may have limited impact) and a 120 minute delay (which is presumably disruptive to an airline and its passengers). For simplicity, it is recommended that such a quantification be approached as a multi-class classification problem, rather than a full numerical regression problem. In such a case, the classification classes (e.g. minor delay, moderate delay, severe delay) should be defined in accordance to what is relevant to industry.  
 4. **A Broader Dataset** that captures additional weather variables such as SIGMETs and winds-aloft would permit the expansion of this methodology from departure delay predictions, to arrival delay predictions. 
 
-## Contributing
+## 9. Contributing
 [Please see project status](#project-status).
 
-## Support
+## 10. Support
 Please contact [the authors](#authors) in case support is required.
 
-## Acknowledgements 
+## 11. Acknowledgements 
 The authors would like to give a special thanks to Mr. Kristjan Rognvaldsson who generously provided his invaluable industry expertise and technical guidance on a pro-bono basis. This project would not have been possible without him. 
 
 We would also like to thank our advisors at the [Constructor Academy](https://academy.constructor.org/) in Zürich for their guidance in making this project a success.  
 
-## Authors and Advisors
+## 12. Authors and Advisors
 ### Authors
 - **Martina Wengle:** [LinkedIn](https://www.linkedin.com/in/martinawengle/)
 - **Ralf Reuvers:** [LinkedIn](https://www.linkedin.com/in/ralf-reuvers-265b34282/)
@@ -206,8 +206,8 @@ We would also like to thank our advisors at the [Constructor Academy](https://ac
 - **Ekaterina Butyugina PhD:** [LinkedIn](https://www.linkedin.com/in/ekaterina-butyugina/)
 - **Kunal Sharma PhD:** [LinkedIn](https://www.linkedin.com/in/drkunalsharma/)
 
-## Sponsor
+## 13. Sponsor
 This project was completed through the generous sponsorship of the **[Free Flight Lab](https://freeflightlab.org/)**.
 
-## License
+## 14. License
 This project is covered by an MIT license; please refer to the LICENSE file in this repository. 
