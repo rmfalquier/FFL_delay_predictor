@@ -32,16 +32,16 @@ def load_data(path):
     df = pd.read_csv(path)
     return df
 
-df_raw = load_data(path='streamlit_data/streamlit_map_1_depdelays_per_airport.csv')
+df_raw = load_data(path='streamlit/streamlit_data/streamlit_map_1_depdelays_per_airport.csv')
 df = deepcopy(df_raw)
 
-df_names_routes_raw = load_data(path='streamlit_data/streamlit_map_1_names_routes.csv')
+df_names_routes_raw = load_data(path='streamlit/streamlit_data/streamlit_map_1_names_routes.csv')
 df_names_routes = deepcopy(df_names_routes_raw)
 
-df_metar_raw = load_data(path='streamlit_data/streamlit_map_2_ml_results.csv')
+df_metar_raw = load_data(path='streamlit/streamlit_data/streamlit_map_2_ml_results.csv')
 df_metar = deepcopy(df_metar_raw)
 
-df_route_cities_raw = load_data(path='streamlit_data/streamlit_map_2_route_cities.csv')
+df_route_cities_raw = load_data(path='streamlit/streamlit_data/streamlit_map_2_route_cities.csv')
 df_route_cities = deepcopy(df_route_cities_raw)
 
 # Rename columns for better readability
@@ -61,7 +61,7 @@ if selected == "Free Flight Lab":
     # Load the data (You may need to adjust this path to your file)
     @st.cache_data
     def load_data():
-        return pd.read_csv("streamlit_data/streamlit_map_2_ml_results.csv")
+        return pd.read_csv("streamlit/streamlit_data/streamlit_map_2_ml_results.csv")
 
     # Load data
     df_raw = load_data()
