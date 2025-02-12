@@ -33,9 +33,45 @@ The project was completed on-time and on-budget in the context of a Data Science
 This project was inspired by a weather-delay analysis dashboard developed under the [Airbus MONARK](https://acubed.airbus.com/projects/monark/) program. The link to the dashboard is provided [here](https://datascribe.shinyapps.io/MonaRk/) for reference (please be advised that it requires some time to load, please be patient).
 
 ## Installation and Requirements
-***TODO: Python 3.10.12 + environment + requirements.txt***
+### Prerequisites
+- Python 3.10.12 installed. You can download it from [python.org](https://www.python.org/downloads/release/python-31012/).
+- `pip` should be installed and up to date (`python -m pip install --upgrade pip`).
 
-### 1. Environment Setup
+### Setup Instructions
+
+#### 1. Create a Virtual Environment
+It is recommended to create a virtual environment to manage dependencies.
+
+##### Using `venv` (Standard)
+```bash
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate     # On Windows
+```
+##### Using `conda` (Optional)
+```bash
+conda create --name my_project_env python=3.10.12
+conda activate my_project_env
+```
+
+#### 2. Install Dependencies
+Ensure you have pip updated:
+
+```bash
+pip install --upgrade pip
+```
+Then install the dependencies from requirements.txt:
+
+```bash
+pip install -r env_requirements.txt
+```
+
+#### 3. Verify Installation
+Run the following command to ensure all dependencies are installed correctly:
+
+```bash
+python -c "import yaml, requests, numpy, pandas, sklearn, imblearn, shap, joblib, plotly, seaborn, matplotlib, folium, streamlit, avwx, IPython; print('All packages installed successfully!')"
+```
 
 ## Usage
 This section outlines the methodology that you should follow to reproduce our results. Although we point to our notebooks and scripts specifically, this section was compiled with the aim that our results be reproducible if the general methodology is followed, rather than if our specific notebooks and scripts are deployed.
