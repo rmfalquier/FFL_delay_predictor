@@ -1,0 +1,9 @@
+streamlit==1.42.0
+pandas==2.0.3
+numpy==1.25.0
+folium==0.14.0
+streamlit-folium==0.11.0
+matplotlib==3.7.2
+streamlit-option-menu==0.4.0
+avwx-engine==1.6.0
+plotly==5.15.0

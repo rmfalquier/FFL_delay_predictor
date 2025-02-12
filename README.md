@@ -47,7 +47,7 @@ This section outlines the methodology that you should follow to reproduce our re
   - **NOTE:** It is at this step that you can inadvertently introduce bias e.g. by selecting routes that are chronically delayed or which have unusually high on-time performance relative to industry standards. A well diversified route-group is highly recommended if performing a general analysis vs. a route-specific analysis. 
 
 **Reference(s):**
-- Sample [dataset](data/final/routes_by_region_2024_v3.csv) and the [notebook](notebooks/FIN_1_routes_by_region.ipynb) used to compile route data from OAG sources
+- Sample [dataset](example_data/routes_by_region_2024_v3.csv) and the [notebook](notebooks/FIN_1_routes_by_region.ipynb) used to compile route data from OAG sources
 
 ### 2. Gathering Flightradar24 Data
 - a) Define the date range for which you want to extract flight information
