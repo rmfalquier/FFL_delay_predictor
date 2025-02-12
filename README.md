@@ -4,8 +4,9 @@ The goal of this project is to generate departure delay probability predictions 
 
 The notebooks and scripts provided in this project are designed to compile flight and weather data, preprocess it for machine learning, define a machine learning pipeline, and train the selected machine learning algorithm for a binary classification of a given passenger flight departure as either "on-time" or "delayed". 
 
-## Visuals
-***TODO: screenshot of dashboard and link to deployed dashboard***
+## Dashboard
+The project results were deployed on a streamlit app which can be accessed via: [ffl-delay-predictor.streamlit.app/](https://ffl-delay-predictor.streamlit.app/)
+![Dashboard Screenshot](/images/dashboard_screenshot.png)
 
 ## Project status
 This project was completed as a Minimum Viable Product / Proof of Concept and is no longer actively maintained. It is therefore open to forking or further development per the corresponding [MIT License and associated conditions](#license). Please refer to the [Feasibility & Roadmap section](#feasibility--roadmap) for recommended next steps.
