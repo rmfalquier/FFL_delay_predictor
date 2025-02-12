@@ -1,0 +1,66 @@
+,Region,Origin Airport Code,Origin Airport Name,Destination Airport Code,Destination Airport Name,Seats
+0,Africa,CAI,Cairo International Airport,JED,King Abdulaziz International Airport,5469274
+1,Africa,CAI,Cairo International Airport,MED,Prince Mohammad bin Abdulaziz International Airport,1844795
+2,Africa,ALG,Houari Boumediene Airport,CDG,Charles de Gaulle Airport,1393359
+3,Africa,ORY,Orly Airport,RUN,Roland Garros Airport,1085706
+4,Africa,CAI,Cairo International Airport,DOH,Hamad International Airport,1044048
+5,Africa,ALG,Houari Boumediene Airport,ORY,Orly Airport,1021577
+6,Asia Pacific,HKG,Hong Kong International Airport,TPE,Taoyuan International Airport,6781577
+7,Asia Pacific,ICN,Incheon International Airport,NRT,Narita International Airport,5410456
+8,Asia Pacific,KUL,Kuala Lumpur International Airport,SIN,Singapore Changi Airport,5382163
+9,Asia Pacific,ICN,Incheon International Airport,KIX,Kansai International Airport,4982769
+10,Asia Pacific,BKK,Suvarnabhumi Airport,HKG,Hong Kong International Airport,4201802
+11,Asia Pacific,CGK,Soekarno–Hatta International Airport,SIN,Singapore Changi Airport,4069071
+12,Asia Pacific,BKK,Suvarnabhumi Airport,SIN,Singapore Changi Airport,4033344
+13,Asia Pacific,NRT,Narita International Airport,TPE,Taoyuan International Airport,3970518
+14,Asia Pacific,FUK,Fukuoka Airport,ICN,Incheon International Airport,3647730
+15,Asia Pacific,CGK,Soekarno–Hatta International Airport,KUL,Kuala Lumpur International Airport,3596747
+16,Europe,JFK,John F. Kennedy International Airport,LHR,Heathrow Airport,4011235
+17,Europe,DXB,Dubai International Airport,LHR,Heathrow Airport,3155008
+18,Europe,FCO,Leonardo da Vinci–Fiumicino Airport,MAD,Adolfo Suárez Madrid–Barajas Airport,2410402
+19,Europe,DUB,Dublin Airport,LHR,Heathrow Airport,2355104
+20,Europe,LIS,Humberto Delgado Airport,MAD,Adolfo Suárez Madrid–Barajas Airport,2302416
+21,Europe,CDG,Charles de Gaulle Airport,JFK,John F. Kennedy International Airport,2110576
+22,Europe,DXB,Dubai International Airport,IST,Istanbul Ataturk Airport,2031001
+23,Latin America,MCO,Orlando International Airport,SJU,Luis Muñoz Marín International Airport,2309653
+24,Latin America,LIM,Jorge Chávez International Airport,SCL,Comodoro Arturo Merino Benítez International Airport,2056486
+25,Latin America,BOG,El Dorado International Airport,MAD,Adolfo Suárez Madrid–Barajas Airport,1808067
+26,Latin America,GRU,Guarulhos–Governador André Franco Montoro International Airport,SCL,Comodoro Arturo Merino Benítez International Airport,1803186
+27,Latin America,JFK,John F. Kennedy International Airport,SJU,Luis Muñoz Marín International Airport,1400682
+28,Latin America,CUN,Cancún International Airport,DFW,Dallas/Fort Worth International Airport,1370714
+29,Latin America,BOG,El Dorado International Airport,PTY,Tocumen International Airport,1366353
+30,Latin America,CUN,Cancún International Airport,YYZ,Toronto Pearson International Airport,1365176
+31,Latin America,AEP,Aeroparque Jorge Newbery,GRU,Guarulhos–Governador André Franco Montoro International Airport,1350013
+32,Latin America,GDL,Guadalajara International Airport,LAX,Los Angeles International Airport,1346685
+33,Middle East,DXB,Dubai International Airport,JED,King Abdulaziz International Airport,2957019
+34,North America,SFO,San Francisco International Airport,TPE,Taoyuan International Airport,1709290
+35,North America,CDG,Charles de Gaulle Airport,YUL,Montréal–Trudeau International Airport,1515224
+36,North America,ICN,Incheon International Airport,LAX,Los Angeles International Airport,1494965
+37,North America,LHR,Heathrow Airport,ORD,O'Hare International Airport,1408171
+38,Europe,PMI,Palma de Mallorca Airport,FRA,Frankfurt Airport,418946
+39,Europe,DUB,Dublin Airport,AMS,Amsterdam Schiphol Airport,1187883
+40,Europe,LHR,London Heathrow Airport,DUB,Dublin Airport,1856099
+41,Europe,ARN,Stockholm Arlanda Airport,OSL,Oslo Gardermoen Airport,1089467
+42,Europe,OSL,Oslo Gardermoen Airport,ARN,Stockholm Arlanda Airport,1089467
+43,Europe,LHR,London Heathrow Airport,ARN,Stockholm Arlanda Airport,1364019
+44,Europe,ARN,Stockholm Arlanda Airport,HEL,Helsinki Airport,1021511
+45,Europe,AMS,Amsterdam Schiphol Airport,HEL,Helsinki Airport,596139
+46,Europe,BER,Berlin Brandenburg Airport,ZRH,Zurich Airport,559958
+47,Europe,CPH,Copenhagen Airport,KEF,Reykjavik Keflavik Airport,582199
+48,Europe,KEF,Reykjavik Keflavik Airport,CDG,Paris Charles de Gaulle Airport,443312
+49,North America,ATL,Hartsfield-Jackson Atlanta International Airport,MIA,Miami International Airport,1033000
+50,North America,MSY,Louis Armstrong New Orleans International Airport,ATL,Hartsfield-Jackson Atlanta International Airport,245000
+51,Europe,AMS,Amsterdam Schiphol Airport,ATL,Hartsfield-Jackson Atlanta International Airport,794053
+52,Asia Pacific,TPE,Taoyuan International Airport,HKG,Hong Kong International Airport,6781577
+53,Asia Pacific,NRT,Narita International Airport,ICN,Incheon International Airport,5410456
+54,Latin America,SJU,Luis Muñoz Marín International Airport,MCO,Orlando International Airport,2309653
+55,Latin America,SCL,Comodoro Arturo Merino Benítez International Airport,LIM,Jorge Chávez International Airport,2056486
+56,Middle East,JED,King Abdulaziz International Airport,DXB,Dubai International Airport,2957019
+57,North America,TPE,Taoyuan International Airport,SFO,San Francisco International Airport,1709290
+58,North America,YUL,Montréal–Trudeau International Airport,CDG,Charles de Gaulle Airport,1515224
+59,Africa,JED,King Abdulaziz International Airport,CAI,Cairo International Airport,5469274
+60,North America,LGA,New York LaGuardia Airport,ORD,Chicago O'Hare International Airport,3118179
+61,North America,YVR,Vancouver International Airport,YYZ,Toronto Pearson International Airport,3498835
+62,North America,JFK,New York John F. Kennedy International Airport,MCO,Orlando International Airport,3494400
+63,Asia Pacific,DEL,Delhi Indira Gandhi International Airport,BOM,Mumbai Chhatrapati Shivaji International Airport,7963686
+64,Asia Pacific,CGK,Jakarta Soekarno-Hatta International Airport,SIN,Singapore Changi Airport,4070000

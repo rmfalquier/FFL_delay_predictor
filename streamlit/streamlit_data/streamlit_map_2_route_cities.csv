@@ -1,0 +1,65 @@
+,route_code,origin,destination,route_cities,origin.icao_code
+0,TJSJ-KMCO,San Juan,Orlando,San Juan - Orlando,TJSJ
+1,EDDB-LSZH,Berlin,Zurich,Berlin - Zurich,EDDB
+2,CYUL-LFPG,Montreal,Paris,Montreal - Paris,CYUL
+3,RCTP-VHHH,Taipei,Hong Kong,Taipei - Hong Kong,RCTP
+4,RJAA-RCTP,Tokyo (Narita),Taipei,Tokyo (Narita) - Taipei,RJAA
+5,BIKF-LFPG,Keflavik,Paris,Keflavik - Paris,BIKF
+6,MMUN-KDFW,Cancun,Dallas-Fort Worth,Cancun - Dallas-Fort Worth,MMUN
+7,LIRF-LEMD,Rome,Madrid,Rome - Madrid,LIRF
+8,MMUN-CYYZ,Cancun,Toronto,Cancun - Toronto,MMUN
+9,HECA-OEJN,Cairo,Jeddah,Cairo - Jeddah,HECA
+10,KMSY-KATL,New Orleans,Atlanta,New Orleans - Atlanta,KMSY
+11,OEJN-HECA,Jeddah,Cairo,Jeddah - Cairo,OEJN
+12,WIII-WSSS,Tangerang,Singapore,Tangerang - Singapore,WIII
+13,EGLL-KORD,London,Chicago,London - Chicago,EGLL
+14,KJFK-KMCO,New York,Orlando,New York - Orlando,KJFK
+15,VHHH-RCTP,Hong Kong,Taipei,Hong Kong - Taipei,VHHH
+16,OMDB-LTFM,Dubai,Istanbul,Dubai - Istanbul,OMDB
+17,SPJC-SCEL,Peru,Santiago,Peru - Santiago,SPJC
+18,KLGA-KORD,New York,Chicago,New York - Chicago,KLGA
+19,RKSI-KLAX,Seoul (Incheon),Los Angeles,Seoul (Incheon) - Los Angeles,RKSI
+20,ESSA-EFHK,Stockholm,Vantaa,Stockholm - Vantaa,ESSA
+21,RCTP-KSFO,Taipei,San Francisco,Taipei - San Francisco,RCTP
+22,EIDW-EHAM,Dublin,Amsterdam,Dublin - Amsterdam,EIDW
+23,DAAG-LFPO,Algiers,Orly (near Paris),Algiers - Orly (near Paris),DAAG
+24,HECA-OEMA,Cairo,Medina,Cairo - Medina,HECA
+25,VTBS-WSSS,Bangkok,Singapore,Bangkok - Singapore,VTBS
+26,CYVR-CYYZ,Vancouver,Toronto,Vancouver - Toronto,CYVR
+27,SKBO-MPTO,Bogota,Panama City,Bogota - Panama City,SKBO
+28,EKCH-BIKF,Copenhagen,Keflavik,Copenhagen - Keflavik,EKCH
+29,VIDP-VABB,New Delhi,Mumbai,New Delhi - Mumbai,VIDP
+30,MMGL-KLAX,Guadalajara,Los Angeles,Guadalajara - Los Angeles,MMGL
+31,EGLL-EIDW,London,Dublin,London - Dublin,EGLL
+32,SKBO-LEMD,Bogota,Madrid,Bogota - Madrid,SKBO
+33,VTBS-VHHH,Bangkok,Hong Kong,Bangkok - Hong Kong,VTBS
+34,SABE-SBGR,Buenos Aires,Sao Paulo,Buenos Aires - Sao Paulo,SABE
+35,LEPA-EDDF,Palma de Mallorca,Frankfurt am Main,Palma de Mallorca - Frankfurt am Main,LEPA
+36,ENGM-ESSA,Oslo,Stockholm,Oslo - Stockholm,ENGM
+37,EGLL-ESSA,London,Stockholm,London - Stockholm,EGLL
+38,EIDW-EGLL,Dublin,London,Dublin - London,EIDW
+39,KATL-KMIA,Atlanta,Miami,Atlanta - Miami,KATL
+40,WIII-WMKK,Tangerang,Sepang,Tangerang - Sepang,WIII
+41,RKSI-RJAA,Seoul (Incheon),Tokyo (Narita),Seoul (Incheon) - Tokyo (Narita),RKSI
+42,SBGR-SCEL,Sao Paulo,Santiago,Sao Paulo - Santiago,SBGR
+43,KSFO-RCTP,San Francisco,Taipei,San Francisco - Taipei,KSFO
+44,SCEL-SPJC,Santiago,Peru,Santiago - Peru,SCEL
+45,RKSI-RJBB,Seoul (Incheon),Izumisano,Seoul (Incheon) - Izumisano,RKSI
+46,LFPG-KJFK,Paris,New York,Paris - New York,LFPG
+47,LFPO-FMEE,Orly (near Paris),Saint-Denis,Orly (near Paris) - Saint-Denis,LFPO
+48,EHAM-KATL,Amsterdam,Atlanta,Amsterdam - Atlanta,EHAM
+49,OEJN-OMDB,Jeddah,Dubai,Jeddah - Dubai,OEJN
+50,EHAM-EFHK,Amsterdam,Vantaa,Amsterdam - Vantaa,EHAM
+51,RJFF-RKSI,Fukuoka,Seoul (Incheon),Fukuoka - Seoul (Incheon),RJFF
+52,ESSA-ENGM,Stockholm,Oslo,Stockholm - Oslo,ESSA
+53,RJAA-RKSI,Tokyo (Narita),Seoul (Incheon),Tokyo (Narita) - Seoul (Incheon),RJAA
+54,OMDB-EGLL,Dubai,London,Dubai - London,OMDB
+55,WMKK-WSSS,Sepang,Singapore,Sepang - Singapore,WMKK
+56,LFPG-CYUL,Paris,Montreal,Paris - Montreal,LFPG
+57,DAAG-LFPG,Algiers,Paris,Algiers - Paris,DAAG
+58,KMCO-TJSJ,Orlando,San Juan,Orlando - San Juan,KMCO
+59,LPPT-LEMD,Lisbon,Madrid,Lisbon - Madrid,LPPT
+60,HECA-OTHH,Cairo,Doha,Cairo - Doha,HECA
+61,KJFK-TJSJ,New York,San Juan,New York - San Juan,KJFK
+62,KJFK-EGLL,New York,London,New York - London,KJFK
+63,OMDB-OEJN,Dubai,Jeddah,Dubai - Jeddah,OMDB
