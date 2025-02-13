@@ -155,12 +155,11 @@ elif selected == "Delay Map":
             metric = f'{percentage_one_decimal}%'
             st.metric(metric_title,metric)
         elif metric_title in ['Routes']: #,'Operators','Aircrafts']:
-
             # Define the correct column name based on metric_title
             column_mapping = {
                 "Routes": "ICAO_route",
-                "Operators": "operator_icao",
-                "Aircrafts": "aircraft_type"
+                # "Operators": "operator_icao",
+                # "Aircrafts": "aircraft_type"
             }
             selected_column = column_mapping.get(metric_title, None)
 
@@ -197,7 +196,7 @@ elif selected == "Delay Map":
             st.metric(metric_title,metric)
 
     def display_map(df,df_airport_info):
-            # Exponential scaling function for normalization
+        # Exponential scaling function for normalization
         def exponential_normalization(value, min_val, max_val, base=3):
             if min_val == max_val:
                 return 0  # Prevent division by zero
@@ -364,7 +363,8 @@ elif selected == "Delay Map":
             # st.write(f"**Selected Flight Status:** {option2}")
             # st.write(f"**Selected Weather Condition:** {option3}")
         except Exception as e:
-            st.write('Select an airport on the map for more details...')
+            # st.write(f'Select an airport on the map for more details...{e}')
+            st.write(f'Select an airport on the map for more details...')
 
     # DISPLAY MAP
     display_map(df,df_names_routes)
