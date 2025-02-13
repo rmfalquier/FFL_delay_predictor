@@ -154,7 +154,7 @@ elif selected == "Delay Map":
             percentage_one_decimal = round(df[df["origin.code_icao"] == icao][metric_title].iloc[0],1)
             metric = f'{percentage_one_decimal}%'
             st.metric(metric_title,metric)
-        elif metric_title in ['Routes','Operators','Aircrafts']:
+        elif metric_title in ['Routes']: #,'Operators','Aircrafts']:
 
             # Define the correct column name based on metric_title
             column_mapping = {
@@ -188,9 +188,9 @@ elif selected == "Delay Map":
         elif metric_title == 'Graph':
             # Ensure selections exist
             selected_routes = st.session_state.get("Routes", [])
-            selected_operators = st.session_state.get("Operator", [])
-            selected_aircraft = st.session_state.get("Aircraft", [])
-            fig = rene.departure_delay_prog_for_route_group(df,icao,regionalize=False,routes=graph_selection["ICAO_route"], operators=graph_selection["operator_icao"], aircraft_types=graph_selection["aircraft_type"])
+            # selected_operators = st.session_state.get("Operator", [])
+            # selected_aircraft = st.session_state.get("Aircraft", [])
+            fig = rene.departure_delay_prog_for_route_group(df,icao,regionalize=False,routes=graph_selection["ICAO_route"]) #, operators=graph_selection["operator_icao"], aircraft_types=graph_selection["aircraft_type"])
             st.plotly_chart(fig, use_container_width=True)
         else:
             metric = df[df["origin.code_icao"] == icao][metric_title]
@@ -302,10 +302,10 @@ elif selected == "Delay Map":
             current_selection = {}
             # Left column: Display the last three metrics vertically
             side_metrics = [
-                ('Routes', df_airport_info),
-                ('Operators', df_airport_info),
-                ('Aircrafts', df_airport_info)
-            ]
+                ('Routes', df_airport_info),]
+            #     ('Operators', df_airport_info),
+            #     ('Aircrafts', df_airport_info)
+            # ]
 
             with left_col:
                 st.markdown("### Additional Info")
@@ -350,7 +350,7 @@ elif selected == "Delay Map":
                 # Add a super small button with hidden appearance
                 st.markdown('<div class="hidden-button">', unsafe_allow_html=True)
                 if st.button(type="tertiary", label=".", key="hidden_button"):
-                    st.audio("data/songs/Orly.mp3", format="audio/mp3")
+                    st.audio("streamlit/streamlit_songs/Orly.mp3", format="audio/mp3")
                 st.markdown("</div>", unsafe_allow_html=True)
 
             # # Create an expander (dropdown-style)
@@ -645,7 +645,7 @@ elif selected == "Contact":
         st.header("René Marcel Falquier")
         st.image(linkedin_logo_url, width=50)
         st.image(
-            "data/img/linkedin_rene.jpg",
+            "streamlit/streamlit_img/linkedin_rene.jpg",
             use_container_width=True
         )
         st.caption("LinkedIn QR Code")
@@ -654,7 +654,7 @@ elif selected == "Contact":
         st.header("Martina Wengle")
         st.image(linkedin_logo_url, width=50)
         st.image(
-            "data/img/linkedin_martina.jpg",
+            "streamlit/streamlit_img/linkedin_martina.jpg",
             use_container_width=True
         )
         st.caption("LinkedIn QR Code")
@@ -663,7 +663,7 @@ elif selected == "Contact":
         st.header("Ralf Reuvers")
         st.image(linkedin_logo_url, width=50)
         st.image(
-            "data/img/linkedin_ralf.jpg",
+            "streamlit/streamlit_img/linkedin_ralf.jpg",
             use_container_width=True
         )
         st.caption("LinkedIn QR Code")
@@ -685,23 +685,23 @@ elif selected == "Contact":
         st.write("Mike Vergalla")
         st.write("*Free Flight Lab*")
 
-    st.markdown("---")
+    # st.markdown("---")
     
-    # ---------- Songs Section ----------
-    with st.expander("🎵 **Songs - Click to Expand** 🎶", expanded=False):
-        st.write("Here are some songs to listen to while you explore our app:")
+    # # ---------- Songs Section ----------
+    # with st.expander("🎵 **Songs - Click to Expand** 🎶", expanded=False):
+    #     st.write("Here are some songs to listen to while you explore our app:")
 
-        st.write("### Dependency Issues")
-        st.audio("data/songs/Dependency Issues.mp3", format="audio/mp3")
+    #     st.write("### Dependency Issues")
+    #     st.audio("data/songs/Dependency Issues.mp3", format="audio/mp3")
 
-        st.write("### Noverbosity")
-        st.audio("data/songs/noverbosity.mp3", format="audio/mp3")
+    #     st.write("### Noverbosity")
+    #     st.audio("data/songs/noverbosity.mp3", format="audio/mp3")
 
-        st.write("### Outta RAM")
-        st.audio("data/songs/Outta RAM.mp3", format="audio/mp3")
+    #     st.write("### Outta RAM")
+    #     st.audio("data/songs/Outta RAM.mp3", format="audio/mp3")
 
-        st.write("### Rene")
-        st.audio("data/songs/Rene.mp3", format="audio/mp3")
+    #     st.write("### Rene")
+    #     st.audio("data/songs/Rene.mp3", format="audio/mp3")
 
-        st.write("### SHAP et XGBoost")
-        st.audio("data/songs/SHAP et XGBoost.mp3", format="audio/mp3")
+    #     st.write("### SHAP et XGBoost")
+    #     st.audio("data/songs/SHAP et XGBoost.mp3", format="audio/mp3")
